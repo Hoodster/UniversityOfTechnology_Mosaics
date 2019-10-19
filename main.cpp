@@ -36,7 +36,6 @@ void printAscending(int rows, int scope, std::string* content, std::string* spac
     }
 }
 
-
 void FourthFigure(int dimension, std::string* content, std::string* space) {
     if (dimension%2 != 1) {
         std::cout << "Mosaic didn't generate. Please provide odd number.\n";
