@@ -37,21 +37,21 @@ void printAscending(int rows, int scope, std::string* content, std::string* spac
 }
 
 
-void FourthFigure(int rows, std::string* content, std::string* space) {
-    if (rows%2 != 1) {
+void FourthFigure(int dimension, std::string* content, std::string* space) {
+    if (dimension%2 != 1) {
         std::cout << "Mosaic didn't generate. Please provide odd number.\n";
         return;
     }
 
-    int halfOfMosaic = rows/2+1;
+    int halfOfMosaic = dimension/2+1;
     
-    printDescending(rows, halfOfMosaic, content, space);
-    printAscending(rows, halfOfMosaic+1, content, space);
+    printDescending(dimension, halfOfMosaic, content, space);
+    printAscending(dimension, halfOfMosaic+1, content, space);
 }
 
-void ThirdFigure(int rows, std::string* content, std::string* space) {
-    for (int row = 1; row <= rows; row++) {
-        for (int item = 1; item <= rows; item++) {
+void ThirdFigure(int dimension, std::string* content, std::string* space) {
+    for (int row = 1; row <= dimension; row++) {
+        for (int item = 1; item <= dimension; item++) {
             if (item < row) {
                 std::cout << *space;
             } else {
